@@ -2,22 +2,22 @@ import { motion } from 'framer-motion';
 
 const certifications = [
   {
-    src: '/cert-licensed.png',
+    src: `${import.meta.env.BASE_URL}cert-licensed.png`,
     alt: 'Licensed',
     label: 'Licensed',
   },
   {
-    src: '/cert-fssai.png',
+    src: `${import.meta.env.BASE_URL}cert-fssai.png`,
     alt: 'FSSAI Certified',
     label: 'FSSAI Certified',
   },
   {
-    src: '/cert-gmp.png',
+    src: `${import.meta.env.BASE_URL}cert-gmp.png`,
     alt: 'GMP Quality Certified',
     label: 'GMP Certified',
   },
   {
-    src: '/cert-iso.jpg',
+    src: `${import.meta.env.BASE_URL}cert-iso.jpg`,
     alt: 'ISO 9001:2015 Certified',
     label: 'ISO 9001:2015',
   },

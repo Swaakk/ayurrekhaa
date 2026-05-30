@@ -109,10 +109,10 @@ export function Footer() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {[
-              { src: '/cert-licensed.png', alt: 'Licensed' },
-              { src: '/cert-fssai.png', alt: 'FSSAI Certified' },
-              { src: '/cert-gmp.png', alt: 'GMP Quality' },
-              { src: '/cert-iso.jpg', alt: 'ISO 9001:2015' },
+              { src: `${import.meta.env.BASE_URL}cert-licensed.png`, alt: 'Licensed' },
+              { src: `${import.meta.env.BASE_URL}cert-fssai.png`, alt: 'FSSAI Certified' },
+              { src: `${import.meta.env.BASE_URL}cert-gmp.png`, alt: 'GMP Quality' },
+              { src: `${import.meta.env.BASE_URL}cert-iso.jpg`, alt: 'ISO 9001:2015' },
             ].map(cert => (
               <div
                 key={cert.alt}

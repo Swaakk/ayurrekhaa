@@ -131,10 +131,10 @@ export function Hero() {
               <span className="text-xs text-gray-400 font-medium tracking-wider uppercase shrink-0">Certified by</span>
               <div className="flex items-center gap-3">
                 {[
-                  { src: '/cert-licensed.png', alt: 'Licensed' },
-                  { src: '/cert-fssai.png', alt: 'FSSAI' },
-                  { src: '/cert-gmp.png', alt: 'GMP' },
-                  { src: '/cert-iso.jpg', alt: 'ISO' },
+                  { src: `${import.meta.env.BASE_URL}cert-licensed.png`, alt: 'Licensed' },
+                  { src: `${import.meta.env.BASE_URL}cert-fssai.png`, alt: 'FSSAI' },
+                  { src: `${import.meta.env.BASE_URL}cert-gmp.png`, alt: 'GMP' },
+                  { src: `${import.meta.env.BASE_URL}cert-iso.jpg`, alt: 'ISO' },
                 ].map((cert, i) => (
                   <motion.div
                     key={cert.alt}
