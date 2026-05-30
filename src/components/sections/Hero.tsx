@@ -1,6 +1,10 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Leaf, ShieldCheck, Truck } from 'lucide-react';
+import certLicensed from '@/assets/cert-licensed.png';
+import certFssai from '@/assets/cert-fssai.png';
+import certGmp from '@/assets/cert-gmp.png';
+import certIso from '@/assets/cert-iso.jpg';
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -131,10 +135,10 @@ export function Hero() {
               <span className="text-xs text-gray-400 font-medium tracking-wider uppercase shrink-0">Certified by</span>
               <div className="flex items-center gap-3">
                 {[
-                  { src: `${import.meta.env.BASE_URL}cert-licensed.png`, alt: 'Licensed' },
-                  { src: `${import.meta.env.BASE_URL}cert-fssai.png`, alt: 'FSSAI' },
-                  { src: `${import.meta.env.BASE_URL}cert-gmp.png`, alt: 'GMP' },
-                  { src: `${import.meta.env.BASE_URL}cert-iso.jpg`, alt: 'ISO' },
+                  { src: certLicensed, alt: 'Licensed' },
+                  { src: certFssai, alt: 'FSSAI' },
+                  { src: certGmp, alt: 'GMP' },
+                  { src: certIso, alt: 'ISO' },
                 ].map((cert, i) => (
                   <motion.div
                     key={cert.alt}

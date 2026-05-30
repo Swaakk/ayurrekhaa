@@ -1,4 +1,8 @@
 import { Leaf, Mail, MapPin, Phone } from 'lucide-react';
+import certLicensed from '@/assets/cert-licensed.png';
+import certFssai from '@/assets/cert-fssai.png';
+import certGmp from '@/assets/cert-gmp.png';
+import certIso from '@/assets/cert-iso.jpg';
 
 const Facebook = ({ className }: { className?: string }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -109,10 +113,10 @@ export function Footer() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {[
-              { src: `${import.meta.env.BASE_URL}cert-licensed.png`, alt: 'Licensed' },
-              { src: `${import.meta.env.BASE_URL}cert-fssai.png`, alt: 'FSSAI Certified' },
-              { src: `${import.meta.env.BASE_URL}cert-gmp.png`, alt: 'GMP Quality' },
-              { src: `${import.meta.env.BASE_URL}cert-iso.jpg`, alt: 'ISO 9001:2015' },
+              { src: certLicensed, alt: 'Licensed' },
+              { src: certFssai, alt: 'FSSAI Certified' },
+              { src: certGmp, alt: 'GMP Quality' },
+              { src: certIso, alt: 'ISO 9001:2015' },
             ].map(cert => (
               <div
                 key={cert.alt}
