@@ -115,12 +115,17 @@ export function Navbar() {
           })}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Button variant="ghost" size="icon" className="text-gray-700 hover:bg-primary/10 hover:text-primary rounded-full">
-              <Search className="w-5 h-5" />
-            </Button>
-          </motion.div>
+        <div className="flex items-center gap-2 md:gap-4">
+          {/* Desktop Only: Search */}
+          <div className="hidden md:flex">
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <Button variant="ghost" size="icon" className="text-gray-700 hover:bg-primary/10 hover:text-primary rounded-full">
+                <Search className="w-5 h-5" />
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Always Visible: Cart */}
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Button
               variant="ghost"
@@ -145,21 +150,26 @@ export function Navbar() {
               </AnimatePresence>
             </Button>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button className="bg-primary text-white hover:bg-primary/90 rounded-full px-6 shadow-md shadow-primary/20">
-              Consult Now
-            </Button>
-          </motion.div>
-        </div>
 
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="md:hidden p-2 text-gray-700 bg-gray-50 rounded-full"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </motion.button>
+          {/* Desktop Only: Consult Button */}
+          <div className="hidden md:flex">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button className="bg-primary text-white hover:bg-primary/90 rounded-full px-6 shadow-md shadow-primary/20">
+                Consult Now
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Mobile Only: Menu Toggle */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="md:hidden p-2 text-gray-700 bg-gray-50 rounded-full ml-1"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </motion.button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
