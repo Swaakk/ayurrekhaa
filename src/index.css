@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+ 
+@layer base {
+  :root {
+    --background: 48 40% 97%; /* Ivory #FAF8F2 */
+    --foreground: 147 68% 19%; /* Deep Green #0F5132 */
+    --card: 0 0% 100%;
+    --card-foreground: 147 68% 19%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 147 68% 19%;
+    --primary: 147 68% 19%; /* Deep Green #0F5132 */
+    --primary-foreground: 48 40% 97%;
+    --secondary: 44 54% 55%; /* Gold #C8A951 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 48 20% 90%;
+    --muted-foreground: 147 20% 40%;
+    --accent: 44 54% 55%;
+    --accent-foreground: 147 68% 19%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 44 20% 85%;
+    --input: 44 20% 85%;
+    --ring: 147 68% 19%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 147 68% 10%;
+    --foreground: 48 40% 97%;
+    --card: 147 68% 14%;
+    --card-foreground: 48 40% 97%;
+    --popover: 147 68% 14%;
+    --popover-foreground: 48 40% 97%;
+    --primary: 44 54% 55%;
+    --primary-foreground: 147 68% 10%;
+    --secondary: 147 40% 25%;
+    --secondary-foreground: 48 40% 97%;
+    --muted: 147 40% 20%;
+    --muted-foreground: 48 20% 80%;
+    --accent: 147 40% 25%;
+    --accent-foreground: 48 40% 97%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 147 40% 20%;
+    --input: 147 40% 20%;
+    --ring: 44 54% 55%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+/* Glassmorphism utilities */
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg dark:bg-black/30 dark:border-white/10;
+}
+.glass-card {
+  @apply bg-white/80 backdrop-blur-lg border border-white/30 shadow-xl dark:bg-gray-900/50 dark:border-gray-800/50;
+}
